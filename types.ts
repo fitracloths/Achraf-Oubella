@@ -23,9 +23,8 @@ export interface Client {
 
 export interface Service {
     title: string;
-    // Fix: Changed type from React.ReactNode to React.ReactElement to resolve an error in `components/Services.tsx`.
-    // React.cloneElement expects a React.ReactElement, and the broader React.ReactNode type was causing a type mismatch.
-    icon: React.ReactElement;
+    // Fix: The type for the icon property was too generic. I've made it more specific to allow `className` to be passed via `React.cloneElement` in `Services.tsx`, which resolves the TypeScript error.
+    icon: React.ReactElement<{ className?: string }>;
 }
 
 export interface Skill {
