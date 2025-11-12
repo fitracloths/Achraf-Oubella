@@ -1,15 +1,8 @@
-import React, { useEffect } from 'react';
-import { Project } from '../types';
-import { XIcon } from './Icons';
+const { useEffect } = React;
 
-interface ProjectModalProps {
-  project: Project;
-  onClose: () => void;
-}
-
-const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+const ProjectModal = ({ project, onClose }) => {
   useEffect(() => {
-    const handleEsc = (event: KeyboardEvent) => {
+    const handleEsc = (event) => {
       if (event.key === 'Escape') {
         onClose();
       }
@@ -83,5 +76,3 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     </div>
   );
 };
-
-export default ProjectModal;

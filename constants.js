@@ -1,9 +1,4 @@
-
-import React from 'react';
-import { Project, Client, Service, Skill } from './types';
-import { FilmIcon, CameraIcon, SparklesIcon, ChartBarIcon, StarIcon, PaintBrushIcon } from './components/Icons';
-
-export const PROJECTS: Project[] = [
+const PROJECTS = [
   {
     id: 1,
     title: "MHL Market - Product Showcase",
@@ -221,9 +216,9 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-export const CATEGORIES: string[] = ["All", "Reels", "Commercials", "Real Estate", "Vlogs", "Cinematic", "Ads"];
+const CATEGORIES = ["All", "Reels", "Commercials", "Real Estate", "Vlogs", "Cinematic", "Ads"];
 
-export const SERVICES: Service[] = [
+const SERVICES = [
     { title: "Video Editing", icon: <FilmIcon /> },
     { title: "Motion Graphics", icon: <SparklesIcon /> },
     { title: "Ads Creation & Launch", icon: <ChartBarIcon /> },
@@ -232,7 +227,7 @@ export const SERVICES: Service[] = [
     { title: "Storytelling", icon: <StarIcon /> },
 ];
 
-export const CLIENTS: Client[] = [
+const CLIENTS = [
     { name: "Done", logoUrl: "https://tailwindui.com/img/logos/158x48/reform-logo-white.svg", caption: "Edited reels for Done" },
     { name: "MHL Market", logoUrl: "https://tailwindui.com/img/logos/158x48/transistor-logo-white.svg", caption: "Creative lead + ads for MHL Market" },
     { name: "AfriShop", logoUrl: "https://tailwindui.com/img/logos/158x48/tuple-logo-white.svg", caption: "Video ads for AfriShop" },
@@ -242,7 +237,7 @@ export const CLIENTS: Client[] = [
 ];
 
 
-export const SKILLS: Skill[] = [
+const SKILLS = [
     { name: "Adobe Premiere Pro", level: 95 },
     { name: "Adobe After Effects", level: 90 },
     { name: "DaVinci Resolve", level: 85 },

@@ -51,10 +51,14 @@
         background-color: rgba(255, 255, 255, 0.1);
       }
     </style>
-  <script type="importmap">
+    <!-- React and ReactDOM from CDN -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <!-- Babel Standalone to transpile JSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="importmap">
 {
   "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
   }
@@ -63,6 +67,23 @@
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    
+    <!-- Load components and scripts with type="text/babel" -->
+    <!-- Note: Order matters here due to dependencies -->
+    <script type="text/babel" src="./components/Icons.js"></script>
+    <script type="text/babel" src="./constants.js"></script>
+    <script type="text/babel" src="./components/GlassCard.js"></script>
+    <script type="text/babel" src="./components/ProjectModal.js"></script>
+    <script type="text/babel" src="./components/Header.js"></script>
+    <script type="text/babel" src="./components/Hero.js"></script>
+    <script type="text/babel" src="./components/FeaturedSlider.js"></script>
+    <script type="text/babel" src="./components/Portfolio.js"></script>
+    <script type="text/babel" src="./components/Services.js"></script>
+    <script type="text/babel" src="./components/Clients.js"></script>
+    <script type="text/babel" src="./components/About.js"></script>
+    <script type="text/babel" src="./components/Contact.js"></script>
+    <script type="text/babel" src="./components/Footer.js"></script>
+    <script type="text/babel" src="./App.js"></script>
+    <script type="text/babel" src="./index.js"></script>
   </body>
 </html>

@@ -1,3 +1,6 @@
+// FIX: Add React import to resolve "Cannot find namespace 'React'" error.
+import React from 'react';
+
 export type ProjectCategory = "All" | "Reels" | "Commercials" | "Real Estate" | "Vlogs" | "Cinematic" | "Ads";
 
 export interface Project {
